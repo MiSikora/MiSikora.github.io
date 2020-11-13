@@ -1,0 +1,37 @@
+name: mehow.io
+author: Michał Sikora
+description: Blog and stuff
+
+footer-links:
+  email: me@mehow.io
+  github: MiSikora
+  twitter: mehow_io
+
+url: http://www.mehow.io
+enforce_ssl: https://www.mehow.io
+
+permalink: /:title/
+version: v1.2.0
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+plugins:
+  - jekyll-paginate
+
+sass:
+  style: :expanded
+
+include: ['_pages']
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+
+paginate: 6
+paginate_path: /page:num/
+
