@@ -1,18 +1,10 @@
 ---
 ---
 
-//
-// IMPORTS
-//
-
 @import "reset";
 @import "variables";
-// Syntax highlighting @import is at the bottom of this file
-
-/**************/
-/* BASE RULES */
-/**************/
-
+@import "darcula";
+@import "svg-icons";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html {
@@ -128,13 +120,6 @@ table tr td :last-child {
 	margin-bottom: 0;
 }
 
-/*.detailed .entry p:first-of-type:first-letter {
-    float: left;
-    margin: 0.13em 0.05em 0 -0.05em;
-    font-size: 3.333em;
-    line-height: 0.75em;
-}*/
-
 #search-container {
   text-align: center;
 }
@@ -236,14 +221,6 @@ p > img {
     clear: both;
 }
 
-/*********************/
-/* LAYOUT / SECTIONS */
-/*********************/
-
-//
-// .masthead
-//
-
 .wrapper-masthead {
   margin-bottom: 25px;
 }
@@ -319,10 +296,6 @@ nav {
   }
 }
 
-//
-// .main
-//
-
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
@@ -342,20 +315,6 @@ nav {
     font-size: 22px;
     font-style: italic;
     background-color: #ede1ff;
-  }
-
-  .you-may-like{
-    margin: 1.8em .8em;
-    /*border-left: 2px solid $gray;*/
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
-    background-color: #ddffb5;;
-  }
-
-  .comments {
-    margin-top: 10px;
   }
 
   .read-more {
@@ -384,16 +343,6 @@ nav {
 footer {
   padding: 20px 0;
   text-align: center;
-}
-
-body:after {
-    background: linear-gradient(to right, #ffffff   0, #2196F3   33%, #E91E63   66%, #000 100%);
-    width: 100%;
-    height: 5px;
-    top: 0;
-    position: absolute;
-    left: 0;
-    content: '';
 }
 
 #bar {
@@ -452,17 +401,13 @@ body:after {
   font-weight: bold;
 }
 
-/* --------------------------------
-
-Modules - reusable parts of our design
-
--------------------------------- */
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
   max-width: 1170px;
   margin: 0 auto;
 }
+
 .cd-container::after {
   /* clearfix */
   content: '';
@@ -554,29 +499,6 @@ Modules - reusable parts of our design
   background: #f0ca45;
 }
 
-.chip {
-    display: inline-block;
-    height: 32px;
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(0,0,0,.6);
-    line-height: 32px;
-    padding: 0 12px;
-    border-radius: 16px;
-    background-color: #e4e4e4;
-    margin-bottom: 5px;
-    margin-right: 5px;
-}
-
-.yellow.lighten-2 {
-    background-color: #efd3f9 !important;
-}
-
-#gh-latest{
-    font-size: 16px;
-    text-align: center;		
-}
-
 .text-link {
     color: #000;
     text-decoration: none;
@@ -617,34 +539,16 @@ Modules - reusable parts of our design
   text-align: center;
 }
 
-.tlemail {
-  width: 80%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.tinyletterForm {
-  border: 1px solid #ccc;
-  padding: 3px;
-  text-align: center;
-  background: #ececec;
-  margin: 8px;
-  border-radius: 5px;
-}
-
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
     width: 60px;
     height: 60px;
     left: 50%;
     margin-left: -30px;
-    /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
+            transform: translateZ(0);
     -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
   .cssanimations .cd-timeline-img.is-hidden {
     visibility: hidden;
@@ -954,9 +858,3 @@ Modules - reusable parts of our design
     transform: translateX(0);
   }
 }
-
-
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "darcula";
-@import "svg-icons";
