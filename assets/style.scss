@@ -627,18 +627,6 @@ Modules - reusable parts of our design
   box-sizing: border-box;
 }
 
-.subscribeBtn {
-  width: 30%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 11pt;
-}
-
 .tinyletterForm {
   border: 1px solid #ccc;
   padding: 3px;
@@ -646,32 +634,6 @@ Modules - reusable parts of our design
   background: #ececec;
   margin: 8px;
   border-radius: 5px;
-}
-
-.btn-subscribe {
-  line-height: 20px;
-  text-decoration: none;
-  background: #00000015;
-  border: none;
-  font-size: 12px;
-  padding: 0px 7px;
-  display: inline-block;
-  border-radius: 4px;
-  position: relative;
-  top: -1px;
-  margin-left: 5px;
-  color: black;
-}
-
-.btn-subscribe:hover {
-  color: black;
-}
-
-.btn-subscribe > svg {
-  width: 21px;
-  height: 21px;
-  vertical-align: bottom;
-  margin: 0 -2px 0 -5px;
 }
 
 @media only screen and (min-width: 1170px) {
