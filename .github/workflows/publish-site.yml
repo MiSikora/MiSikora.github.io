@@ -13,6 +13,27 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+
+    - name: Install ImageMagick
+      uses: mfinelli/setup-imagemagick@v2
+
+    - name: Generate thumbnails
+      run: |
+        cd src
+        rm -rf thumbnails
+        mkdir thumbnails
+        if [ -d "photoshoots" ]; then
+          cd photoshoots
+          dirs=$(ls -d -- */)
+          for dir in $dirs; do
+            files=("$dir"/*)
+            file=${files[0]}
+            if ! [[ $file =~ ^.*\*$ ]]; then
+              thumbName=${dir%/}
+              convert -resize 480x300^ -quality 85 "$file" "../thumbnails/${thumbName}.jpeg"
+            fi
+          done
+        fi
     
     - name: Install Node
       uses: actions/setup-node@v3
