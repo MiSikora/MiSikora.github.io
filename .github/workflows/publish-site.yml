@@ -29,7 +29,7 @@ jobs:
             for file in "$dir"/*; do
               if ! [[ $file =~ ^.*\*$ ]]; then
                 thumbName="${dir%/}-${file##*/}"
-                convert -resize 480x300^ -quality 85 "$file" "../thumbnails/${thumbName}"
+                convert -resize 800x600^ -quality 85 "$file" "../thumbnails/${thumbName}"
               fi
             done
           done
