@@ -26,12 +26,12 @@ jobs:
           cd photoshoots
           dirs=$(ls -d -- */)
           for dir in $dirs; do
-            files=("$dir"/*)
-            file=${files[0]}
-            if ! [[ $file =~ ^.*\*$ ]]; then
-              thumbName=${dir%/}
-              convert -resize 480x300^ -quality 85 "$file" "../thumbnails/${thumbName}.jpeg"
-            fi
+            for file in "$dir"/*; do
+              if ! [[ $file =~ ^.*\*$ ]]; then
+                thumbName="${dir%/}-${file##*/}"
+                convert -resize 480x300^ -quality 85 "$file" "../thumbnails/${thumbName}"
+              fi
+            done
           done
         fi
     
