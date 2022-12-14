@@ -8,7 +8,7 @@ const thumbnails = context.keys().map(key => {
     id: key.slice(2, -4),
     src: context(key),
   }
-})
+}).reverse()
 
 ReactDOM
   .createRoot(document.getElementById('root') as HTMLElement)
